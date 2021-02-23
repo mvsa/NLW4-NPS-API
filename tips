@@ -1,0 +1,21 @@
+yarn init -y
+yarn add express
+
+/src
+.server.ts
+
+instala o ts e roda ele para gerar o tsconfig.json
+yarn add typescript -D
+yarn tsc --init
+
+
+- é necessario transpilar codigo js com funções ES5+ pois o node n entende
+porem para dev não vamos transpilar ainda e usamos o ts-node-dev que faz isso (EM DEV!!)
+ele tb faz o papel do nodemon
+yarn add ts-node-dev -D   --- criar script{--transpile-only ignora erros  }
+
+
+
+--------------------------------------------------------------
+--JS modo estrito = util apenas quando trabalhando com projetos em versões antigas do JS
+evitando algumas "gambiarras". Desativado no tsconfig.json
