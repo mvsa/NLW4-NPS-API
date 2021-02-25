@@ -7,6 +7,7 @@ Iniciando a estrutura base do app. Instalação de dependências cores e setando
 
 - Trabalho realizado na aula 02:
 Configuração do banco de dados Sqlite com TypeOrm, definição de migrations.
+Definição de Rotas, Models e Controllers(utilizando repositories) de entidades
 
 Projeto ainda em desenvolvimento, seguindo a agenda de compartilhamento das aulas.
 Anotações pessoais no arquivo tips

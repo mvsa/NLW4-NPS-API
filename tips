@@ -26,8 +26,11 @@ script typeOrm para usar a cli dele
  migrations coamndos = yarn typeorm migration:create -n Nome /////run
 
 /controllers
+.routes.ts
 
+/src/models   
 
+yarn add uuid  **
 --------------------------------------------------------------
 --JS modo estrito = util apenas quando trabalhando com projetos em versões antigas do JS
 evitando algumas "gambiarras". Desativado no tsconfig.json
@@ -37,3 +40,9 @@ evitando algumas "gambiarras". Desativado no tsconfig.json
 mas não indicado para produção
 
 extensão visual studio para sqlite
+
+
+ "strictPropertyInitialization": false, a Classe não irá inicializar os atributos
+
+ **Posso deixar a criação do uuid como responsabilidade do banco, mas isso é propenso a erros
+ a depender de diferentes tipos de banco, por isso nesse projeto a responsabilidade foi para o codigo
