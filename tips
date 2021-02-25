@@ -14,8 +14,26 @@ porem para dev não vamos transpilar ainda e usamos o ts-node-dev que faz isso (
 ele tb faz o papel do nodemon
 yarn add ts-node-dev -D   --- criar script{--transpile-only ignora erros  }
 
+yarn add typeorm reflect-metadata
+yarn add sqlite3
+
+.ormconfig.json
+/src/database        .index.ts
+
+/src/database/migrations
+
+script typeOrm para usar a cli dele
+ migrations coamndos = yarn typeorm migration:create -n Nome /////run
+
+/controllers
 
 
 --------------------------------------------------------------
 --JS modo estrito = util apenas quando trabalhando com projetos em versões antigas do JS
 evitando algumas "gambiarras". Desativado no tsconfig.json
+
+
+*usando sqlite, pois é leve e usado em memoria, bom pra realização de POCS
+mas não indicado para produção
+
+extensão visual studio para sqlite
