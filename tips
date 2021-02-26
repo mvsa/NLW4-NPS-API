@@ -31,6 +31,8 @@ script typeOrm para usar a cli dele
 /src/models   
 
 yarn add uuid  **
+
+/repositories
 --------------------------------------------------------------
 --JS modo estrito = util apenas quando trabalhando com projetos em versões antigas do JS
 evitando algumas "gambiarras". Desativado no tsconfig.json
@@ -46,3 +48,7 @@ extensão visual studio para sqlite
 
  **Posso deixar a criação do uuid como responsabilidade do banco, mas isso é propenso a erros
  a depender de diferentes tipos de banco, por isso nesse projeto a responsabilidade foi para o codigo
+
+vs code - enngrenagem > keyboardshortcuts
+
+ refatoração de codigo

@@ -7,6 +7,5 @@ const userController = new UserController;//abordagem diferente do usado em Nlw 
 
 router.post("/users", userController.create);
 
-export {router}; //a instrutora faz exportações dessa forma? Existe algum beneficio pratico em arquivos
-//com um unico elemento a ser exportado?
-
+export {router}; //a instrutora faz exportações dessa forma pois pode auxiliar com o processo de autoimport
+// do vs code, porém é mais uma preferencia pessoal
