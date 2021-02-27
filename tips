@@ -66,6 +66,9 @@ yarn add nodemailer
 /services
 
 
+Template de email com HandleBars
+/views
+
 --------------------------------------------------------------
 --JS modo estrito = util apenas quando trabalhando com projetos em versões antigas do JS
 evitando algumas "gambiarras". Desativado no tsconfig.json
@@ -104,3 +107,5 @@ exemplo do postteste
 Migration -> Model -> Repository -> controller
 
 construtores de classe não permitem o uso de async, apenas o modo antigo (then). Pq?
+
+__dirname caminho realativo da aplicação
