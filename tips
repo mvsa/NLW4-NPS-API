@@ -58,8 +58,12 @@ ele já faz esse set
 
 
 
+Email:
+Par email será usado o NodeMailer
+Porém tb necessitamos de um servidor smtp, sera usado o Ethereal, que fornce um serviço smtp fake
 
-
+yarn add nodemailer
+/services
 
 
 --------------------------------------------------------------
@@ -98,3 +102,5 @@ https://dev.to/numtostr/environment-variables-in-node-js-the-right-way-15ad
 exemplo do postteste
 
 Migration -> Model -> Repository -> controller
+
+construtores de classe não permitem o uso de async, apenas o modo antigo (then). Pq?

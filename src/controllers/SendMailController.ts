@@ -3,6 +3,7 @@ import { Request, Response } from "express";
 import { UsersRepository } from "../repositories/UsersRepository";
 import { SurveysRepository } from '../repositories/SurveysRepository';
 import { SurveysUsersRepository } from '../repositories/SurveysUsersRepository';
+import SendMailService from '../services/SendMailService';
 
 
 class SendMailController {
@@ -22,9 +23,9 @@ class SendMailController {
             });
         }
 
-        const surveyAlreadyExists = await surveysRepository.findOne({id: survey_id});
+        const survey = await surveysRepository.findOne({id: survey_id});
 
-        if(!surveyAlreadyExists){
+        if(!survey){
             return response.status(400).json({
                 error: "Survey not found",
             })
@@ -37,6 +38,8 @@ class SendMailController {
 
 
         await surveysUsersRepository.save(surveyUser);
+
+        await SendMailService.execute(email, survey.title,survey.description );
 
         return response.json(surveyUser);
 
