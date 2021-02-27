@@ -69,6 +69,9 @@ yarn add nodemailer
 Template de email com HandleBars
 /views
 
+.env  
+- essa é a master, porém posso ter outras para diferentes amb., exemplo: .env.dev
+
 --------------------------------------------------------------
 --JS modo estrito = util apenas quando trabalhando com projetos em versões antigas do JS
 evitando algumas "gambiarras". Desativado no tsconfig.json
