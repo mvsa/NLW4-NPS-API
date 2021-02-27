@@ -33,6 +33,28 @@ script typeOrm para usar a cli dele
 yarn add uuid  **
 
 /repositories
+
+
+
+Testes: os do Nlw serão so de integração
+-Unitarios
+-Integração (-> request, ->router->controller ->repository  <- repository <-controller <-response)
+-EndToEnd (Caixa preta)
+
+yarn add jest @types/jest -D
+yarn jest --init
+./__tests__
+yarn add ts-jest -D   - para poder trabalhar com ts  nos testes
+
+yarn add supertest @types/supertest -D  -- Auxilio em testes de integração, para simular que um servidor
+esta sendo iniciado
+
+alter server.ts   >    .app.ts
+alter dabatase index
+alter package.json test -- com windows precisa adicionar SET antes do node_env
+**deveria ficar =   "test": "SET NODE_ENV=test jest", mas so com jest funciona? Pela documentação
+ele já faz esse set
+
 --------------------------------------------------------------
 --JS modo estrito = util apenas quando trabalhando com projetos em versões antigas do JS
 evitando algumas "gambiarras". Desativado no tsconfig.json
@@ -53,13 +75,17 @@ vs code - enngrenagem > keyboardshortcuts
 
 git log
 
- refatoração de codigo
- survey Model  controllers repository routes
-
-
+coverage report jest
 
 
 
  ------------------------
 
 ctrl D, edição de multiplos termos iguais
+
+Aparentemente setar o ambiente direto no package json não é uma operação tão segura?
+Opções como o dotenv poderiam ser melhores?
+https://dev.to/numtostr/environment-variables-in-node-js-the-right-way-15ad
+
+-posso criar scripts post que serão rodados apos algum outro ja existente
+exemplo do postteste
