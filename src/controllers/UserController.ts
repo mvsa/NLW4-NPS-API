@@ -25,9 +25,12 @@ class UserController{
             email
         })
 
+        
         await usersRepository.save(user);
+        
 
         return response.json(user);
+       
     }
 }
 
