@@ -35,20 +35,26 @@ class SendMailController {
             })
         }
 
+       
+
+        const surveyAlreadyExistsForUser = await surveysUsersRepository.findOne({
+            where:{user_id:userAlreadyExists.id , value: null},
+            relations:["user","survey"]
+        });
+
+        //where:[{user_id:userAlreadyExists.id},  {value: null}],
+        //Esse where é condicional, a ou b -- o colchete e a divisão de chaves transforma em OR?
+
         const variables = {
             name: userAlreadyExists.name,
             title:survey.title,
             description:survey.description,
-            user_id: userAlreadyExists.id,
+            id: "",
             link:process.env.URL_MAIL,
         }
 
-        const surveyAlreadyExistsForUser = await surveysUsersRepository.findOne({
-            where:[{user_id:userAlreadyExists.id},  {value: null}],
-            relations:["user","survey"]
-        });
-
         if (surveyAlreadyExistsForUser){
+            variables.id = surveyAlreadyExistsForUser.id;
             await SendMailService.execute(email, survey.title, variables,npsPath);
             return response.json(surveyAlreadyExistsForUser);
         }
@@ -59,6 +65,8 @@ class SendMailController {
         });
 
         await surveysUsersRepository.save(surveyUser);
+
+        variables.id = surveyUser.id;
 
         await SendMailService.execute(email, survey.title, variables,npsPath );
 
