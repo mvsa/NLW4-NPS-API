@@ -15,5 +15,5 @@ Refatoração de código para aplicar repositórios custom, adição de nova ent
 - Trabalho realizado na aula 04:
 Refatoração de código e criação de serviço de e-mail utilizando um template pré definido que pode receber variáveis dinâmicas.
 
-Projeto ainda em desenvolvimento, seguindo a agenda de compartilhamento das aulas.
-Anotações pessoais no arquivo tips
+- Trabalho realizado na aula 05:
+Refatoração de testes, criação de classe customizada para gerenciamento de erros, validações com Yup e Controller gerenciador das respostas dos usuários e finalização da funcionalidade de calculo NPS.
