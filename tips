@@ -73,7 +73,9 @@ Template de email com HandleBars
 - essa é a master, porém posso ter outras para diferentes amb., exemplo: .env.dev
 
 .AnswerController
+.NPSController
 
+yarn add yup
 
 
 
