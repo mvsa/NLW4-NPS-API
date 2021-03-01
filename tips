@@ -52,8 +52,9 @@ esta sendo iniciado
 alter server.ts   >    .app.ts
 alter dabatase index
 alter package.json test -- com windows precisa adicionar SET antes do node_env
-**deveria ficar =   "test": "SET NODE_ENV=test jest", mas so com jest funciona? Pela documentação
+**deveria ficar =   "test": "SET NODE_ENV=test jest", mas so com jest funciona, Pela documentação
 ele já faz esse set
+jest flag -i - obriga que testes executem um apos o outro (arguardando a finalização do anterior)
 
 
 
@@ -77,7 +78,8 @@ Template de email com HandleBars
 
 yarn add yup
 
-
+/errors
+yarn add express-async-errors
 
 --------------------------------------------------------------
 --JS modo estrito = util apenas quando trabalhando com projetos em versões antigas do JS
@@ -112,7 +114,11 @@ Opções como o dotenv poderiam ser melhores?
 https://dev.to/numtostr/environment-variables-in-node-js-the-right-way-15ad
 
 -posso criar scripts post que serão rodados apos algum outro ja existente
-exemplo do postteste
+exemplo do postteste -----  "posttest": "rm ./src/database/database.teste.sqlite"
+Em windows o comando RM nem sempre funciona?
+
+
+
 
 Migration -> Model -> Repository -> controller
 
